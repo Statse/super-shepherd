@@ -1,6 +1,7 @@
 ---
 import astroLogo from '../assets/astro.svg';
 import background from '../assets/background.svg';
+import ContactForm from './ContactForm.astro';
 ---
 
 <div id="container">
@@ -25,6 +26,8 @@ import background from '../assets/background.svg';
 				</a>
 			</section>
 		</section>
+
+		<ContactForm />
 	</main>
 
 	<a href="https://astro.build/blog/astro-5/" id="news" class="box">
@@ -58,9 +61,12 @@ import background from '../assets/background.svg';
 	}
 
 	main {
-		height: 100%;
+		min-height: 100%;
 		display: flex;
 		justify-content: center;
+		align-items: center;
+		gap: 48px;
+		padding: 32px 16px;
 	}
 
 	#hero {
@@ -177,10 +183,21 @@ import background from '../assets/background.svg';
 		}
 	}
 
+	@media screen and (max-width: 1024px) {
+		main {
+			flex-direction: column;
+			gap: 32px;
+		}
+	}
+
 	@media screen and (max-width: 768px) {
 		#container {
 			display: flex;
 			flex-direction: column;
+		}
+
+		main {
+			padding: 16px;
 		}
 
 		#hero {
