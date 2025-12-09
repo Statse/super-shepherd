@@ -20,7 +20,7 @@ import background from '../assets/background.svg';
 					<p>Create a GitHub issue with the <code>automated-task</code> label. Describe what you need built or fixed.</p>
 				</div>
 
-				<div class="workflow-arrow">→</div>
+				<div class="workflow-arrow">↓</div>
 
 				<div class="workflow-step">
 					<div class="step-icon">🔍</div>
@@ -28,7 +28,7 @@ import background from '../assets/background.svg';
 					<p>The orchestrator polls every 30 seconds, automatically picking up new labeled issues.</p>
 				</div>
 
-				<div class="workflow-arrow">→</div>
+				<div class="workflow-arrow">↓</div>
 
 				<div class="workflow-step">
 					<div class="step-icon">🤖</div>
@@ -36,7 +36,7 @@ import background from '../assets/background.svg';
 					<p>Claude Code analyzes your repository and autonomously implements the solution.</p>
 				</div>
 
-				<div class="workflow-arrow">→</div>
+				<div class="workflow-arrow">↓</div>
 
 				<div class="workflow-step">
 					<div class="step-icon">✅</div>
@@ -115,17 +115,18 @@ import background from '../assets/background.svg';
 
 	.workflow-grid {
 		display: flex;
+		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		gap: 24px;
-		flex-wrap: wrap;
 	}
 
 	.workflow-step {
 		background: rgba(255, 255, 255, 0.9);
 		border-radius: 16px;
 		padding: 32px 24px;
-		width: 200px;
+		width: 100%;
+		max-width: 600px;
 		text-align: center;
 		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 		transition: transform 0.2s, box-shadow 0.2s;
@@ -186,16 +187,6 @@ import background from '../assets/background.svg';
 		#workflow h2 {
 			font-size: 30px;
 		}
-
-		.workflow-arrow {
-			display: none;
-		}
-
-		.workflow-grid {
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			gap: 20px;
-		}
 	}
 
 	@media screen and (max-width: 640px) {
@@ -217,14 +208,8 @@ import background from '../assets/background.svg';
 			margin-bottom: 32px;
 		}
 
-		.workflow-grid {
-			grid-template-columns: 1fr;
-		}
-
 		.workflow-step {
-			width: 100%;
 			max-width: 400px;
-			margin: 0 auto;
 		}
 	}
 </style>
