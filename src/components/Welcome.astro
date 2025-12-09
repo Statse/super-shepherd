@@ -13,6 +13,13 @@ import background from '../assets/background.svg';
 		<section id="workflow">
 			<h2>How It Works</h2>
 
+			<p class="workflow-intro">
+				Super Shepherd is an automated development workflow that transforms GitHub issues into production-ready code.
+				By combining GitHub Actions with Claude Code AI, it eliminates manual coding tasks and accelerates your development cycle—saving developers hours of routine work and delivering faster results that keep clients happy.
+				Simply label an issue with <code>automated-task</code>, and watch as the entire process—from code generation to pull request creation—happens automatically.
+				Need changes to a PR? Add a comment with your feedback and apply the <code>needs-bot-update</code> label—the bot will automatically detect your comment and update the pull request accordingly.
+			</p>
+
 			<div class="workflow-grid">
 				<div class="workflow-step">
 					<div class="step-icon">📝</div>
@@ -110,7 +117,17 @@ import background from '../assets/background.svg';
 		font-size: 36px;
 		font-weight: 600;
 		color: #111827;
-		margin: 0 0 48px 0;
+		margin: 0 0 24px 0;
+	}
+
+	.workflow-intro {
+		text-align: center;
+		font-size: 18px;
+		color: #4b5563;
+		line-height: 1.7;
+		max-width: 800px;
+		margin: 0 auto 48px auto;
+		padding: 0 16px;
 	}
 
 	.workflow-grid {
@@ -187,6 +204,10 @@ import background from '../assets/background.svg';
 		#workflow h2 {
 			font-size: 30px;
 		}
+
+		.workflow-intro {
+			font-size: 16px;
+		}
 	}
 
 	@media screen and (max-width: 640px) {
@@ -205,6 +226,11 @@ import background from '../assets/background.svg';
 
 		#workflow h2 {
 			font-size: 26px;
+			margin-bottom: 20px;
+		}
+
+		.workflow-intro {
+			font-size: 16px;
 			margin-bottom: 32px;
 		}
 
