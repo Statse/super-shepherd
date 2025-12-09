@@ -8,6 +8,13 @@ import background from '../assets/background.svg';
 		<section id="hero">
 			<h1>Automated Coding with AI</h1>
 			<p class="tagline">From GitHub issue to pull request, automatically</p>
+			<p class="future-badge">The Future Is Here</p>
+			<p class="hype-text">
+				Experience the revolutionary power of AI-driven development. No more tedious coding. No more endless debugging sessions.
+				Just describe what you need, and watch as Claude Code brings your ideas to life in seconds.
+				This isn't just automation—it's a quantum leap in how software gets built.
+				<strong>The era of autonomous development has arrived.</strong>
+			</p>
 		</section>
 
 		<section id="workflow">
@@ -104,8 +111,48 @@ import background from '../assets/background.svg';
 	.tagline {
 		font-size: 24px;
 		color: #4b5563;
-		margin: 0;
+		margin: 0 0 32px 0;
 		line-height: 1.5;
+	}
+
+	.future-badge {
+		display: inline-block;
+		font-size: 18px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		color: #ffffff;
+		background: linear-gradient(135deg, #3245ff 0%, #bc52ee 100%);
+		padding: 12px 32px;
+		border-radius: 50px;
+		margin: 0 0 24px 0;
+		box-shadow: 0 8px 24px rgba(50, 69, 255, 0.3);
+		animation: pulse 2s ease-in-out infinite;
+	}
+
+	@keyframes pulse {
+		0%, 100% {
+			transform: scale(1);
+			box-shadow: 0 8px 24px rgba(50, 69, 255, 0.3);
+		}
+		50% {
+			transform: scale(1.05);
+			box-shadow: 0 12px 32px rgba(50, 69, 255, 0.5);
+		}
+	}
+
+	.hype-text {
+		font-size: 20px;
+		color: #374151;
+		line-height: 1.8;
+		max-width: 700px;
+		margin: 0 auto;
+		padding: 0 16px;
+	}
+
+	.hype-text strong {
+		color: #3245ff;
+		font-weight: 700;
 	}
 
 	#workflow {
@@ -201,6 +248,16 @@ import background from '../assets/background.svg';
 			font-size: 20px;
 		}
 
+		.future-badge {
+			font-size: 16px;
+			padding: 10px 28px;
+			letter-spacing: 1.5px;
+		}
+
+		.hype-text {
+			font-size: 18px;
+		}
+
 		#workflow h2 {
 			font-size: 30px;
 		}
@@ -222,6 +279,18 @@ import background from '../assets/background.svg';
 
 		.tagline {
 			font-size: 18px;
+			margin-bottom: 24px;
+		}
+
+		.future-badge {
+			font-size: 14px;
+			padding: 8px 20px;
+			letter-spacing: 1px;
+		}
+
+		.hype-text {
+			font-size: 16px;
+			line-height: 1.7;
 		}
 
 		#workflow h2 {
