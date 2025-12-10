@@ -1,0 +1,46 @@
+{
+  "site": {
+    "title": "Super Shepherd - Automatisoitu koodaus tekoälyn avulla"
+  },
+  "hero": {
+    "heading": "10x nopeampi kehitys",
+    "tagline": "Automatisoitu koodin generointi - ongelmista ratkaisuihin",
+    "badge": "Tulevaisuus on täällä",
+    "description": "Koe tekoälyohjatun kehityksen vallankumouksellinen voima. Ei enää tylsiä koodaussessioita. Ei enää loputtomia virheenkorjausjaksoja. Ei enää kontekstin vaihtamista suunnittelun, toteutuksen ja testauksen välillä. Kuvaile vain mitä tarvitset ja katso Claude Coden toteuttavan ideasi sekunneissa. Tämä ei ole vain automaatiota—se on kvanttihyppy siinä, miten ohjelmistoja rakennetaan. Kuvittele maailma, jossa tehtäväjonosi kutistuu automaattisesti, rutiinitehtävät suorittavat itsensä kun sinä nukut, ja tiimisi voi keskittyä luoviin haasteisiin, jotka todella merkitsevät. Vikakorjauksista ominaisuuksien toteutuksiin, refaktoroinnista dokumentaatioon, jokainen GitHub-ongelma muuttuu autonomisen suorituksen mahdollisuudeksi.",
+    "descriptionStrong": "Autonomisen kehityksen aikakausi on saapunut, ja se muuttaa tapaa, jolla tiimit julkaisevat ohjelmistoja."
+  },
+  "workflow": {
+    "heading": "Kuinka se toimii",
+    "intro": "Super Shepherd on automatisoitu kehitystyönkulku, joka muuttaa GitHub-ongelmat tuotantovalmiiksi koodiksi. Yhdistämällä GitHub Actions -toiminnot Claude Code AI:hin, se poistaa manuaaliset koodaustehtävät ja nopeuttaa kehitysjaksoa—säästäen kehittäjien rutiinityöstä tunteja ja tuottaen nopeampia tuloksia, jotka pitävät asiakkaat tyytyväisinä. Lisää ongelmaan vain",
+    "introCode": "automated-task",
+    "introEnd": " -tunniste, ja katso koko prosessin—koodin generoinnista pull requestin luomiseen—tapahtuvan automaattisesti.",
+    "step1": {
+      "title": "Ongelma luotu",
+      "description": "Luo GitHub-ongelma",
+      "descriptionCode": "automated-task",
+      "descriptionEnd": " -tunnisteella. Kuvaile mitä tarvitset rakennettavaksi tai korjattavaksi."
+    },
+    "step2": {
+      "title": "Botti havaitsee",
+      "description": "Orkestroija tarkistaa 30 sekunnin välein ja poimii automaattisesti uudet merkityt ongelmat."
+    },
+    "step3": {
+      "title": "Claude koodaa",
+      "description": "Claude Code analysoi repositoriosi ja toteuttaa ratkaisun autonomisesti."
+    },
+    "step4": {
+      "title": "PR luotu",
+      "description": "Muutokset tallennetaan, pull request luodaan ja ongelma päivitetään ja suljetaan."
+    }
+  },
+  "contact": {
+    "heading": "Ota yhteyttä",
+    "nameLabel": "Nimi",
+    "emailLabel": "Sähköposti",
+    "messageLabel": "Viesti",
+    "newsletterLabel": "Tilaa uutiskirje",
+    "submitButton": "Lähetä viesti",
+    "successMessage": "Kiitos viestistäsi! Otamme sinuun yhteyttä pian.",
+    "successNewsletter": " Sinut on liitetty uutiskirjeen tilaajaksi!"
+  }
+}

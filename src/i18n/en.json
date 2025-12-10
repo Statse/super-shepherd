@@ -1,0 +1,46 @@
+{
+  "site": {
+    "title": "Super Shepherd - Automated Coding with AI"
+  },
+  "hero": {
+    "heading": "10x Faster Development",
+    "tagline": "Automated Code Generation - From Issues to Solutions",
+    "badge": "The Future Is Here",
+    "description": "Experience the revolutionary power of AI-driven development. No more tedious coding. No more endless debugging sessions. No more context-switching between planning, implementation, and testing. Just describe what you need, and watch as Claude Code brings your ideas to life in seconds. This isn't just automation—it's a quantum leap in how software gets built. Imagine a world where your backlog shrinks automatically, where routine tasks complete themselves while you sleep, and where your team can focus on the creative challenges that truly matter. From bug fixes to feature implementations, from refactoring to documentation, every GitHub issue becomes an opportunity for autonomous execution.",
+    "descriptionStrong": "The era of autonomous development has arrived, and it's transforming how teams ship software."
+  },
+  "workflow": {
+    "heading": "How It Works",
+    "intro": "Super Shepherd is an automated development workflow that transforms GitHub issues into production-ready code. By combining GitHub Actions with Claude Code AI, it eliminates manual coding tasks and accelerates your development cycle—saving developers hours of routine work and delivering faster results that keep clients happy. Simply label an issue with",
+    "introCode": "automated-task",
+    "introEnd": ", and watch as the entire process—from code generation to pull request creation—happens automatically.",
+    "step1": {
+      "title": "Issue Created",
+      "description": "Create a GitHub issue with the",
+      "descriptionCode": "automated-task",
+      "descriptionEnd": " label. Describe what you need built or fixed."
+    },
+    "step2": {
+      "title": "Bot Detects",
+      "description": "The orchestrator polls every 30 seconds, automatically picking up new labeled issues."
+    },
+    "step3": {
+      "title": "Claude Codes",
+      "description": "Claude Code analyzes your repository and autonomously implements the solution."
+    },
+    "step4": {
+      "title": "PR Created",
+      "description": "Changes are committed, a pull request is created, and the issue is updated and closed."
+    }
+  },
+  "contact": {
+    "heading": "Contact Us",
+    "nameLabel": "Name",
+    "emailLabel": "Email",
+    "messageLabel": "Message",
+    "newsletterLabel": "Sign up for newsletter",
+    "submitButton": "Send Message",
+    "successMessage": "Thank you for your message! We'll get back to you soon.",
+    "successNewsletter": " You've been signed up for our newsletter!"
+  }
+}

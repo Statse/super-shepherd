@@ -1,13 +1,22 @@
+---
+import LanguageSwitcher from '../components/LanguageSwitcher.astro';
+import { getCurrentLocale, getTranslations } from '../i18n/utils';
+
+const currentLocale = getCurrentLocale(Astro.url);
+const t = getTranslations(currentLocale);
+---
+
 <!doctype html>
-<html lang="en">
+<html lang={currentLocale}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Super Shepherd - Automated Coding with AI</title>
+		<title>{t.site.title}</title>
 	</head>
 	<body>
+		<LanguageSwitcher currentLocale={currentLocale} />
 		<slot />
 	</body>
 </html>

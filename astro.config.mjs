@@ -5,4 +5,11 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   site: 'https://Statse.github.io',
   base: '/super-shepherd',
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'fi'],
+    routing: {
+      prefixDefaultLocale: false
+    }
+  }
 });

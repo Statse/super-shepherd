@@ -1,65 +1,60 @@
 ---
 import background from '../assets/background.svg';
+import { getCurrentLocale, getTranslations } from '../i18n/utils';
+
+const currentLocale = getCurrentLocale(Astro.url);
+const t = getTranslations(currentLocale);
 ---
 
 <div id="container">
 	<img id="background" src={background.src} alt="" fetchpriority="high" />
 	<main>
 		<section id="hero">
-			<h1>10x Faster Development</h1>
-			<p class="tagline">Automated Code Generation - From Issues to Solutions</p>
-			<p class="future-badge">The Future Is Here</p>
+			<h1>{t.hero.heading}</h1>
+			<p class="tagline">{t.hero.tagline}</p>
+			<p class="future-badge">{t.hero.badge}</p>
 			<p class="hype-text">
-				Experience the revolutionary power of AI-driven development. No more tedious coding. No more endless debugging sessions.
-				No more context-switching between planning, implementation, and testing.
-				Just describe what you need, and watch as Claude Code brings your ideas to life in seconds.
-				This isn't just automation—it's a quantum leap in how software gets built.
-				Imagine a world where your backlog shrinks automatically, where routine tasks complete themselves while you sleep,
-				and where your team can focus on the creative challenges that truly matter.
-				From bug fixes to feature implementations, from refactoring to documentation,
-				every GitHub issue becomes an opportunity for autonomous execution.
-				<strong>The era of autonomous development has arrived, and it's transforming how teams ship software.</strong>
+				{t.hero.description}
+				<strong>{t.hero.descriptionStrong}</strong>
 			</p>
 		</section>
 
 		<section id="workflow">
-			<h2>How It Works</h2>
+			<h2>{t.workflow.heading}</h2>
 
 			<p class="workflow-intro">
-				Super Shepherd is an automated development workflow that transforms GitHub issues into production-ready code.
-				By combining GitHub Actions with Claude Code AI, it eliminates manual coding tasks and accelerates your development cycle—saving developers hours of routine work and delivering faster results that keep clients happy.
-				Simply label an issue with <code>automated-task</code>, and watch as the entire process—from code generation to pull request creation—happens automatically.
+				{t.workflow.intro} <code>{t.workflow.introCode}</code>{t.workflow.introEnd}
 			</p>
 
 			<div class="workflow-grid">
 				<div class="workflow-step">
 					<div class="step-icon">📝</div>
-					<h3>Issue Created</h3>
-					<p>Create a GitHub issue with the <code>automated-task</code> label. Describe what you need built or fixed.</p>
+					<h3>{t.workflow.step1.title}</h3>
+					<p>{t.workflow.step1.description} <code>{t.workflow.step1.descriptionCode}</code>{t.workflow.step1.descriptionEnd}</p>
 				</div>
 
 				<div class="workflow-arrow">↓</div>
 
 				<div class="workflow-step">
 					<div class="step-icon">🔍</div>
-					<h3>Bot Detects</h3>
-					<p>The orchestrator polls every 30 seconds, automatically picking up new labeled issues.</p>
+					<h3>{t.workflow.step2.title}</h3>
+					<p>{t.workflow.step2.description}</p>
 				</div>
 
 				<div class="workflow-arrow">↓</div>
 
 				<div class="workflow-step">
 					<div class="step-icon">🤖</div>
-					<h3>Claude Codes</h3>
-					<p>Claude Code analyzes your repository and autonomously implements the solution.</p>
+					<h3>{t.workflow.step3.title}</h3>
+					<p>{t.workflow.step3.description}</p>
 				</div>
 
 				<div class="workflow-arrow">↓</div>
 
 				<div class="workflow-step">
 					<div class="step-icon">✅</div>
-					<h3>PR Created</h3>
-					<p>Changes are committed, a pull request is created, and the issue is updated and closed.</p>
+					<h3>{t.workflow.step4.title}</h3>
+					<p>{t.workflow.step4.description}</p>
 				</div>
 			</div>
 		</section>
