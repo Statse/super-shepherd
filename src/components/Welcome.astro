@@ -104,9 +104,8 @@ import background from '../assets/background.svg';
 		font-size: 56px;
 		font-weight: 700;
 		margin: 0 0 24px 0;
-		color: #111827;
 		line-height: 1.1;
-		background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+		background: linear-gradient(83.21deg, #5865ff 0%, #d670ff 100%);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
@@ -114,7 +113,7 @@ import background from '../assets/background.svg';
 
 	.tagline {
 		font-size: 24px;
-		color: #4b5563;
+		color: #b0b8c3;
 		margin: 0 0 32px 0;
 		line-height: 1.5;
 	}
@@ -126,40 +125,40 @@ import background from '../assets/background.svg';
 		text-transform: uppercase;
 		letter-spacing: 2px;
 		color: #ffffff;
-		background: linear-gradient(135deg, #3245ff 0%, #bc52ee 100%);
+		background: linear-gradient(135deg, #5865ff 0%, #d670ff 100%);
 		padding: 12px 32px;
 		border-radius: 50px;
 		margin: 0 0 24px 0;
-		box-shadow: 0 8px 24px rgba(50, 69, 255, 0.3);
+		box-shadow: 0 8px 24px rgba(88, 101, 255, 0.5);
 		animation: pulse 2s ease-in-out infinite;
 	}
 
 	@keyframes pulse {
 		0%, 100% {
 			transform: scale(1);
-			box-shadow: 0 8px 24px rgba(50, 69, 255, 0.3);
+			box-shadow: 0 8px 24px rgba(88, 101, 255, 0.5);
 		}
 		50% {
 			transform: scale(1.05);
-			box-shadow: 0 12px 32px rgba(50, 69, 255, 0.5);
+			box-shadow: 0 12px 32px rgba(88, 101, 255, 0.7);
 		}
 	}
 
 	.hype-text {
 		font-size: 20px;
-		color: #374151;
+		color: #d1d5db;
 		line-height: 1.8;
 		max-width: 700px;
 		margin: 0 auto;
 		padding: 24px 32px;
-		background: rgba(255, 255, 255, 0.9);
+		background: rgba(30, 35, 45, 0.8);
 		border-radius: 16px;
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-		border: 1px solid rgba(50, 69, 255, 0.1);
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+		border: 1px solid rgba(88, 101, 255, 0.2);
 	}
 
 	.hype-text strong {
-		color: #3245ff;
+		color: #8b95ff;
 		font-weight: 700;
 	}
 
@@ -171,22 +170,22 @@ import background from '../assets/background.svg';
 		text-align: center;
 		font-size: 36px;
 		font-weight: 600;
-		color: #111827;
+		color: #f3f4f6;
 		margin: 0 0 24px 0;
 	}
 
 	.workflow-intro {
 		text-align: center;
 		font-size: 18px;
-		color: #4b5563;
+		color: #d1d5db;
 		line-height: 1.7;
 		max-width: 800px;
 		margin: 0 auto 48px auto;
 		padding: 24px 32px;
-		background: rgba(255, 255, 255, 0.9);
+		background: rgba(30, 35, 45, 0.8);
 		border-radius: 16px;
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-		border: 1px solid rgba(50, 69, 255, 0.1);
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+		border: 1px solid rgba(88, 101, 255, 0.2);
 	}
 
 	.workflow-grid {
@@ -198,20 +197,20 @@ import background from '../assets/background.svg';
 	}
 
 	.workflow-step {
-		background: rgba(255, 255, 255, 0.9);
+		background: rgba(30, 35, 45, 0.8);
 		border-radius: 16px;
 		padding: 32px 24px;
 		width: 100%;
 		max-width: 600px;
 		text-align: center;
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 		transition: transform 0.2s, box-shadow 0.2s;
-		border: 1px solid rgba(50, 69, 255, 0.1);
+		border: 1px solid rgba(88, 101, 255, 0.2);
 	}
 
 	.workflow-step:hover {
 		transform: translateY(-4px);
-		box-shadow: 0 8px 12px rgba(50, 69, 255, 0.15);
+		box-shadow: 0 8px 12px rgba(88, 101, 255, 0.3);
 	}
 
 	.step-icon {
@@ -223,28 +222,28 @@ import background from '../assets/background.svg';
 	.workflow-step h3 {
 		font-size: 20px;
 		font-weight: 600;
-		color: #111827;
+		color: #f3f4f6;
 		margin: 0 0 12px 0;
 	}
 
 	.workflow-step p {
 		font-size: 14px;
-		color: #6b7280;
+		color: #b0b8c3;
 		line-height: 1.6;
 		margin: 0;
 	}
 
 	.workflow-arrow {
 		font-size: 32px;
-		color: #3245ff;
+		color: #8b95ff;
 		font-weight: 700;
 		flex-shrink: 0;
 	}
 
 	code {
 		display: inline;
-		background: rgba(50, 69, 255, 0.1);
-		color: #3245ff;
+		background: rgba(88, 101, 255, 0.2);
+		color: #a5b0ff;
 		border-radius: 4px;
 		padding: 2px 6px;
 		font-size: 13px;
