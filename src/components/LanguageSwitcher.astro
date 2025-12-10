@@ -1,0 +1,81 @@
+---
+const { currentLocale } = Astro.props;
+const baseUrl = import.meta.env.BASE_URL || '/super-shepherd';
+---
+
+<div class="language-switcher">
+	<a
+		href={`${baseUrl}/`}
+		class:list={['lang-btn', { active: currentLocale === 'en' }]}
+		aria-label="Switch to English"
+	>
+		EN
+	</a>
+	<a
+		href={`${baseUrl}/fi/`}
+		class:list={['lang-btn', { active: currentLocale === 'fi' }]}
+		aria-label="Vaihda suomeksi"
+	>
+		FI
+	</a>
+</div>
+
+<style>
+	.language-switcher {
+		position: fixed;
+		top: 24px;
+		right: 24px;
+		display: flex;
+		gap: 8px;
+		z-index: 1000;
+		background: rgba(255, 255, 255, 0.95);
+		padding: 8px;
+		border-radius: 12px;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+		border: 1px solid rgba(50, 69, 255, 0.1);
+		backdrop-filter: blur(10px);
+	}
+
+	.lang-btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 48px;
+		height: 36px;
+		border-radius: 8px;
+		font-size: 14px;
+		font-weight: 600;
+		text-decoration: none;
+		color: #4b5563;
+		background: transparent;
+		transition: all 0.2s;
+		border: 1px solid transparent;
+	}
+
+	.lang-btn:hover {
+		background: rgba(50, 69, 255, 0.05);
+		color: #3245ff;
+		border-color: rgba(50, 69, 255, 0.1);
+	}
+
+	.lang-btn.active {
+		background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+		color: white;
+		box-shadow: 0 2px 8px rgba(50, 69, 255, 0.3);
+	}
+
+	@media screen and (max-width: 640px) {
+		.language-switcher {
+			top: 16px;
+			right: 16px;
+			padding: 6px;
+			border-radius: 10px;
+		}
+
+		.lang-btn {
+			width: 40px;
+			height: 32px;
+			font-size: 13px;
+		}
+	}
+</style>
