@@ -18,6 +18,13 @@ const baseUrl = import.meta.env.BASE_URL || '/super-shepherd';
 	>
 		FI
 	</a>
+	<a
+		href={`${baseUrl}/sv/`}
+		class:list={['lang-btn', { active: currentLocale === 'sv' }]}
+		aria-label="Byt till svenska"
+	>
+		SV
+	</a>
 </div>
 
 <style>

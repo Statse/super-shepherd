@@ -1,0 +1,46 @@
+{
+  "site": {
+    "title": "Super Shepherd - Automatiserad kodning med AI"
+  },
+  "hero": {
+    "heading": "10x snabbare utveckling",
+    "tagline": "Automatiserad kodgenerering - från problem till lösningar",
+    "badge": "Framtiden är här",
+    "description": "Upplev den revolutionerande kraften i AI-driven utveckling. Inga fler tråkiga kodningssessioner. Inga fler oändliga felsökningssessioner. Ingen mer kontextväxling mellan planering, implementation och testning. Beskriv bara vad du behöver och se hur Claude Code förverkligar dina idéer på några sekunder. Det här är inte bara automatisering—det är ett kvantsprång i hur mjukvara byggs. Föreställ dig en värld där din backlog krymper automatiskt, där rutinuppgifter slutför sig själva medan du sover, och där ditt team kan fokusera på de kreativa utmaningar som verkligen betyder något. Från buggfixar till funktionsimplementationer, från refaktorering till dokumentation, varje GitHub-problem blir en möjlighet för autonom exekvering.",
+    "descriptionStrong": "Eran av autonom utveckling har anlänt, och den förändrar hur team levererar mjukvara."
+  },
+  "workflow": {
+    "heading": "Hur det fungerar",
+    "intro": "Super Shepherd är ett automatiserat utvecklingsarbetsflöde som omvandlar GitHub-problem till produktionsklar kod. Genom att kombinera GitHub Actions med Claude Code AI eliminerar det manuella kodningsuppgifter och påskyndar din utvecklingscykel—sparar utvecklare timmar av rutinarbete och levererar snabbare resultat som håller kunder nöjda. Lägg helt enkelt till etiketten",
+    "introCode": "automated-task",
+    "introEnd": " till ett problem, och se hela processen—från kodgenerering till skapande av pull request—ske automatiskt.",
+    "step1": {
+      "title": "Problem skapat",
+      "description": "Skapa ett GitHub-problem med etiketten",
+      "descriptionCode": "automated-task",
+      "descriptionEnd": ". Beskriv vad du behöver byggt eller fixat."
+    },
+    "step2": {
+      "title": "Boten upptäcker",
+      "description": "Orkestreraren pollrar var 30:e sekund och plockar automatiskt upp nya märkta problem."
+    },
+    "step3": {
+      "title": "Claude kodar",
+      "description": "Claude Code analyserar ditt repositorium och implementerar lösningen autonomt."
+    },
+    "step4": {
+      "title": "PR skapad",
+      "description": "Ändringar committas, en pull request skapas och problemet uppdateras och stängs."
+    }
+  },
+  "contact": {
+    "heading": "Kontakta oss",
+    "nameLabel": "Namn",
+    "emailLabel": "E-post",
+    "messageLabel": "Meddelande",
+    "newsletterLabel": "Prenumerera på nyhetsbrev",
+    "submitButton": "Skicka meddelande",
+    "successMessage": "Tack för ditt meddelande! Vi återkommer till dig snart.",
+    "successNewsletter": " Du har registrerats för vårt nyhetsbrev!"
+  }
+}

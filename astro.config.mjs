@@ -7,7 +7,7 @@ export default defineConfig({
   base: '/super-shepherd',
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'fi'],
+    locales: ['en', 'fi', 'sv'],
     routing: {
       prefixDefaultLocale: false
     }
