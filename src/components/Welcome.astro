@@ -15,49 +15,237 @@ const t = getTranslations(currentLocale);
 			<p class="future-badge">{t.hero.badge}</p>
 			<p class="hype-text">
 				{t.hero.description}
-				<strong>{t.hero.descriptionStrong}</strong>
 			</p>
+			<p class="metrics">{t.hero.descriptionStrong}</p>
+
+			{t.hero.codeExample && (
+				<pre class="code-example"><code>{t.hero.codeExample}</code></pre>
+			)}
 		</section>
 
 		<section id="workflow">
 			<h2>{t.workflow.heading}</h2>
 
 			<p class="workflow-intro">
-				{t.workflow.intro} <code>{t.workflow.introCode}</code>{t.workflow.introEnd}
+				{t.workflow.intro}
 			</p>
+
+			{t.workflow.architecture && (
+				<pre class="architecture-diagram"><code>{t.workflow.architecture}</code></pre>
+			)}
 
 			<div class="workflow-grid">
 				<div class="workflow-step">
-					<div class="step-icon">📝</div>
+					<div class="step-number">1</div>
 					<h3>{t.workflow.step1.title}</h3>
 					<p>{t.workflow.step1.description} <code>{t.workflow.step1.descriptionCode}</code>{t.workflow.step1.descriptionEnd}</p>
 				</div>
 
-				<div class="workflow-arrow">↓</div>
+				<div class="workflow-arrow">→</div>
 
 				<div class="workflow-step">
-					<div class="step-icon">🔍</div>
+					<div class="step-number">2</div>
 					<h3>{t.workflow.step2.title}</h3>
 					<p>{t.workflow.step2.description}</p>
 				</div>
 
-				<div class="workflow-arrow">↓</div>
+				<div class="workflow-arrow">→</div>
 
 				<div class="workflow-step">
-					<div class="step-icon">🤖</div>
+					<div class="step-number">3</div>
 					<h3>{t.workflow.step3.title}</h3>
 					<p>{t.workflow.step3.description}</p>
 				</div>
 
-				<div class="workflow-arrow">↓</div>
+				<div class="workflow-arrow">→</div>
 
 				<div class="workflow-step">
-					<div class="step-icon">✅</div>
+					<div class="step-number">4</div>
 					<h3>{t.workflow.step4.title}</h3>
 					<p>{t.workflow.step4.description}</p>
 				</div>
 			</div>
 		</section>
+
+		{t.technical && (
+			<section id="technical">
+				<h2>{t.technical.heading}</h2>
+
+				<div class="technical-grid">
+					<div class="tech-card">
+						<h3>{t.technical.deployment.title}</h3>
+						<ul>
+							<li>{t.technical.deployment.docker}</li>
+							<li>{t.technical.deployment.selfHosted}</li>
+							<li>{t.technical.deployment.githubActions}</li>
+							<li>{t.technical.deployment.requirements}</li>
+						</ul>
+					</div>
+
+					<div class="tech-card">
+						<h3>{t.technical.security.title}</h3>
+						<ul>
+							<li>{t.technical.security.execution}</li>
+							<li>{t.technical.security.credentials}</li>
+							<li>{t.technical.security.audit}</li>
+							<li>{t.technical.security.permissions}</li>
+						</ul>
+					</div>
+
+					<div class="tech-card">
+						<h3>{t.technical.integration.title}</h3>
+						<ul>
+							<li>{t.technical.integration.github}</li>
+							<li>{t.technical.integration.jira}</li>
+							<li>{t.technical.integration.webhooks}</li>
+							<li>{t.technical.integration.ci}</li>
+						</ul>
+					</div>
+
+					<div class="tech-card">
+						<h3>{t.technical.customization.title}</h3>
+						<ul>
+							<li>{t.technical.customization.templates}</li>
+							<li>{t.technical.customization.workflows}</li>
+							<li>{t.technical.customization.filters}</li>
+							<li>{t.technical.customization.prompts}</li>
+						</ul>
+					</div>
+
+					<div class="tech-card tech-stack">
+						<h3>{t.technical.stack.title}</h3>
+						<ul>
+							<li>{t.technical.stack.runtime}</li>
+							<li>{t.technical.stack.ai}</li>
+							<li>{t.technical.stack.vcs}</li>
+							<li>{t.technical.stack.infra}</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		)}
+
+		{t.useCases && (
+			<section id="use-cases">
+				<h2>{t.useCases.heading}</h2>
+				<p class="section-intro">{t.useCases.intro}</p>
+
+				<div class="use-cases-grid">
+					<div class="use-case">
+						<h3>{t.useCases.case1.title}</h3>
+						<p class="metric">{t.useCases.case1.metric}</p>
+						<p>{t.useCases.case1.description}</p>
+						<p class="example">{t.useCases.case1.example}</p>
+					</div>
+
+					<div class="use-case">
+						<h3>{t.useCases.case2.title}</h3>
+						<p class="metric">{t.useCases.case2.metric}</p>
+						<p>{t.useCases.case2.description}</p>
+						<p class="example">{t.useCases.case2.example}</p>
+					</div>
+
+					<div class="use-case">
+						<h3>{t.useCases.case3.title}</h3>
+						<p class="metric">{t.useCases.case3.metric}</p>
+						<p>{t.useCases.case3.description}</p>
+						<p class="example">{t.useCases.case3.example}</p>
+					</div>
+
+					<div class="use-case">
+						<h3>{t.useCases.case4.title}</h3>
+						<p class="metric">{t.useCases.case4.metric}</p>
+						<p>{t.useCases.case4.description}</p>
+						<p class="example">{t.useCases.case4.example}</p>
+					</div>
+				</div>
+			</section>
+		)}
+
+		{t.roi && (
+			<section id="roi">
+				<h2>{t.roi.heading}</h2>
+				<p class="section-intro">{t.roi.intro}</p>
+
+				<div class="roi-example">
+					<h3>{t.roi.example.heading}</h3>
+					<div class="roi-calculation">
+						<div class="roi-item">
+							<span class="roi-label">Team:</span>
+							<span class="roi-value">{t.roi.example.scenario}</span>
+						</div>
+						<div class="roi-item">
+							<span class="roi-label">Maintenance:</span>
+							<span class="roi-value">{t.roi.example.maintenance}</span>
+						</div>
+						<div class="roi-item highlight">
+							<span class="roi-label">Current Cost:</span>
+							<span class="roi-value">{t.roi.example.cost}</span>
+						</div>
+						<div class="roi-item">
+							<span class="roi-label">Automation:</span>
+							<span class="roi-value">{t.roi.example.automation}</span>
+						</div>
+						<div class="roi-item highlight savings">
+							<span class="roi-label">Annual Savings:</span>
+							<span class="roi-value">{t.roi.example.savings}</span>
+						</div>
+						<div class="roi-item">
+							<span class="roi-label">Time Freed:</span>
+							<span class="roi-value">{t.roi.example.time}</span>
+						</div>
+					</div>
+				</div>
+			</section>
+		)}
+
+		{t.faq && (
+			<section id="faq">
+				<h2>{t.faq.heading}</h2>
+
+				<div class="faq-grid">
+					<div class="faq-item">
+						<h3>{t.faq.q1.question}</h3>
+						<p>{t.faq.q1.answer}</p>
+					</div>
+
+					<div class="faq-item">
+						<h3>{t.faq.q2.question}</h3>
+						<p>{t.faq.q2.answer}</p>
+					</div>
+
+					<div class="faq-item">
+						<h3>{t.faq.q3.question}</h3>
+						<p>{t.faq.q3.answer}</p>
+					</div>
+
+					<div class="faq-item">
+						<h3>{t.faq.q4.question}</h3>
+						<p>{t.faq.q4.answer}</p>
+					</div>
+
+					<div class="faq-item">
+						<h3>{t.faq.q5.question}</h3>
+						<p>{t.faq.q5.answer}</p>
+					</div>
+
+					<div class="faq-item">
+						<h3>{t.faq.q6.question}</h3>
+						<p>{t.faq.q6.answer}</p>
+					</div>
+
+					<div class="faq-item">
+						<h3>{t.faq.q7.question}</h3>
+						<p>{t.faq.q7.answer}</p>
+					</div>
+
+					<div class="faq-item">
+						<h3>{t.faq.q8.question}</h3>
+						<p>{t.faq.q8.answer}</p>
+					</div>
+				</div>
+			</section>
+		)}
 	</main>
 </div>
 
@@ -87,16 +275,18 @@ const t = getTranslations(currentLocale);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 80px;
+		gap: 100px;
 	}
 
+	/* Hero Section */
 	#hero {
 		text-align: center;
-		max-width: 800px;
+		max-width: 900px;
+		width: 100%;
 	}
 
 	h1 {
-		font-size: 56px;
+		font-size: 52px;
 		font-weight: 700;
 		margin: 0 0 24px 0;
 		line-height: 1.1;
@@ -107,100 +297,150 @@ const t = getTranslations(currentLocale);
 	}
 
 	.tagline {
-		font-size: 24px;
+		font-size: 20px;
 		color: #b0b8c3;
-		margin: 0 0 32px 0;
+		margin: 0 0 24px 0;
 		line-height: 1.5;
+		font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
 	}
 
 	.future-badge {
 		display: inline-block;
-		font-size: 18px;
+		font-size: 16px;
 		font-weight: 700;
 		text-transform: uppercase;
 		letter-spacing: 2px;
 		color: #ffffff;
-		background: linear-gradient(135deg, #5865ff 0%, #d670ff 100%);
-		padding: 12px 32px;
+		background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+		padding: 10px 28px;
 		border-radius: 50px;
-		margin: 0 0 24px 0;
-		box-shadow: 0 8px 24px rgba(88, 101, 255, 0.5);
-		animation: pulse 2s ease-in-out infinite;
-	}
-
-	@keyframes pulse {
-		0%, 100% {
-			transform: scale(1);
-			box-shadow: 0 8px 24px rgba(88, 101, 255, 0.5);
-		}
-		50% {
-			transform: scale(1.05);
-			box-shadow: 0 12px 32px rgba(88, 101, 255, 0.7);
-		}
+		margin: 0 0 32px 0;
+		box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
 	}
 
 	.hype-text {
-		font-size: 20px;
+		font-size: 18px;
 		color: #d1d5db;
 		line-height: 1.8;
-		max-width: 700px;
-		margin: 0 auto;
+		max-width: 800px;
+		margin: 0 auto 16px auto;
 		padding: 24px 32px;
 		background: rgba(30, 35, 45, 0.8);
-		border-radius: 16px;
+		border-radius: 12px;
 		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 		border: 1px solid rgba(88, 101, 255, 0.2);
+		text-align: left;
 	}
 
-	.hype-text strong {
-		color: #8b95ff;
-		font-weight: 700;
+	.metrics {
+		font-size: 16px;
+		color: #10b981;
+		font-weight: 600;
+		line-height: 1.6;
+		max-width: 800px;
+		margin: 0 auto 24px auto;
+		padding: 16px 24px;
+		background: rgba(16, 185, 129, 0.1);
+		border-radius: 8px;
+		border: 1px solid rgba(16, 185, 129, 0.3);
 	}
 
+	.code-example {
+		background: rgba(15, 20, 25, 0.95);
+		border: 1px solid rgba(88, 101, 255, 0.3);
+		border-radius: 12px;
+		padding: 24px;
+		margin: 32px auto 0 auto;
+		max-width: 700px;
+		text-align: left;
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+		overflow-x: auto;
+	}
+
+	.code-example code {
+		font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+		font-size: 14px;
+		line-height: 1.6;
+		color: #e5e7eb;
+		background: none;
+		padding: 0;
+		display: block;
+		white-space: pre;
+	}
+
+	/* Workflow Section */
 	#workflow {
 		width: 100%;
 	}
 
-	#workflow h2 {
+	#workflow h2,
+	#technical h2,
+	#use-cases h2,
+	#roi h2,
+	#faq h2 {
 		text-align: center;
 		font-size: 36px;
 		font-weight: 600;
 		color: #f3f4f6;
-		margin: 0 0 24px 0;
+		margin: 0 0 16px 0;
 	}
 
-	.workflow-intro {
+	.workflow-intro,
+	.section-intro {
 		text-align: center;
-		font-size: 18px;
+		font-size: 16px;
 		color: #d1d5db;
 		line-height: 1.7;
 		max-width: 800px;
-		margin: 0 auto 48px auto;
-		padding: 24px 32px;
+		margin: 0 auto 32px auto;
+		padding: 20px 32px;
 		background: rgba(30, 35, 45, 0.8);
-		border-radius: 16px;
+		border-radius: 12px;
 		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 		border: 1px solid rgba(88, 101, 255, 0.2);
 	}
 
+	.architecture-diagram {
+		background: rgba(15, 20, 25, 0.95);
+		border: 1px solid rgba(88, 101, 255, 0.3);
+		border-radius: 12px;
+		padding: 32px;
+		margin: 32px auto;
+		max-width: 800px;
+		overflow-x: auto;
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+	}
+
+	.architecture-diagram code {
+		font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+		font-size: 13px;
+		line-height: 1.5;
+		color: #a5b0ff;
+		background: none;
+		padding: 0;
+		display: block;
+		white-space: pre;
+	}
+
 	.workflow-grid {
-		display: flex;
-		flex-direction: column;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
 		align-items: center;
 		justify-content: center;
-		gap: 24px;
+		gap: 16px;
+		max-width: 1100px;
+		margin: 0 auto;
 	}
 
 	.workflow-step {
 		background: rgba(30, 35, 45, 0.8);
-		border-radius: 16px;
-		padding: 32px 24px;
-		width: 100%;
-		max-width: 600px;
+		border-radius: 12px;
+		padding: 24px 20px;
 		text-align: center;
 		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 		transition: transform 0.2s, box-shadow 0.2s;
 		border: 1px solid rgba(88, 101, 255, 0.2);
+		position: relative;
 	}
 
 	.workflow-step:hover {
@@ -208,33 +448,278 @@ const t = getTranslations(currentLocale);
 		box-shadow: 0 8px 12px rgba(88, 101, 255, 0.3);
 	}
 
-	.step-icon {
-		font-size: 48px;
+	.step-number {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		background: linear-gradient(135deg, #5865ff 0%, #d670ff 100%);
+		color: #ffffff;
+		font-size: 20px;
+		font-weight: 700;
 		margin-bottom: 16px;
-		line-height: 1;
 	}
 
 	.workflow-step h3 {
-		font-size: 20px;
+		font-size: 16px;
 		font-weight: 600;
 		color: #f3f4f6;
 		margin: 0 0 12px 0;
+		font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
 	}
 
 	.workflow-step p {
-		font-size: 14px;
+		font-size: 13px;
 		color: #b0b8c3;
 		line-height: 1.6;
 		margin: 0;
 	}
 
 	.workflow-arrow {
-		font-size: 32px;
+		font-size: 24px;
 		color: #8b95ff;
 		font-weight: 700;
-		flex-shrink: 0;
+		text-align: center;
 	}
 
+	/* Technical Section */
+	#technical {
+		width: 100%;
+	}
+
+	.technical-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 24px;
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+
+	.tech-card {
+		background: rgba(30, 35, 45, 0.8);
+		border: 1px solid rgba(88, 101, 255, 0.2);
+		border-radius: 12px;
+		padding: 24px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+		transition: transform 0.2s, box-shadow 0.2s;
+	}
+
+	.tech-card:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 8px 12px rgba(88, 101, 255, 0.3);
+	}
+
+	.tech-card.tech-stack {
+		grid-column: 1 / -1;
+	}
+
+	.tech-card h3 {
+		font-size: 18px;
+		font-weight: 600;
+		color: #8b95ff;
+		margin: 0 0 16px 0;
+		font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
+	}
+
+	.tech-card ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.tech-card li {
+		font-size: 14px;
+		color: #d1d5db;
+		line-height: 1.8;
+		padding-left: 20px;
+		position: relative;
+		margin-bottom: 8px;
+	}
+
+	.tech-card li::before {
+		content: "▸";
+		position: absolute;
+		left: 0;
+		color: #8b95ff;
+		font-weight: 700;
+	}
+
+	/* Use Cases Section */
+	#use-cases {
+		width: 100%;
+	}
+
+	.use-cases-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 24px;
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+
+	.use-case {
+		background: rgba(30, 35, 45, 0.8);
+		border: 1px solid rgba(88, 101, 255, 0.2);
+		border-radius: 12px;
+		padding: 24px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+		transition: transform 0.2s, box-shadow 0.2s;
+	}
+
+	.use-case:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 8px 12px rgba(88, 101, 255, 0.3);
+	}
+
+	.use-case h3 {
+		font-size: 18px;
+		font-weight: 600;
+		color: #f3f4f6;
+		margin: 0 0 12px 0;
+	}
+
+	.use-case .metric {
+		font-size: 16px;
+		color: #10b981;
+		font-weight: 700;
+		margin: 0 0 16px 0;
+		padding: 8px 12px;
+		background: rgba(16, 185, 129, 0.1);
+		border-radius: 6px;
+		border: 1px solid rgba(16, 185, 129, 0.3);
+		font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
+	}
+
+	.use-case p {
+		font-size: 14px;
+		color: #d1d5db;
+		line-height: 1.7;
+		margin: 0 0 12px 0;
+	}
+
+	.use-case .example {
+		font-size: 13px;
+		color: #a5b0ff;
+		font-style: italic;
+		background: rgba(88, 101, 255, 0.1);
+		padding: 12px;
+		border-radius: 6px;
+		border-left: 3px solid #8b95ff;
+		margin: 12px 0 0 0;
+	}
+
+	/* ROI Section */
+	#roi {
+		width: 100%;
+	}
+
+	.roi-example {
+		background: rgba(30, 35, 45, 0.8);
+		border: 1px solid rgba(88, 101, 255, 0.2);
+		border-radius: 12px;
+		padding: 32px;
+		max-width: 700px;
+		margin: 0 auto;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+	}
+
+	.roi-example h3 {
+		font-size: 20px;
+		font-weight: 600;
+		color: #f3f4f6;
+		margin: 0 0 24px 0;
+		text-align: center;
+	}
+
+	.roi-calculation {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	.roi-item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 12px 16px;
+		background: rgba(15, 20, 25, 0.6);
+		border-radius: 8px;
+		border: 1px solid rgba(88, 101, 255, 0.1);
+	}
+
+	.roi-item.highlight {
+		border-color: rgba(88, 101, 255, 0.4);
+		background: rgba(88, 101, 255, 0.1);
+	}
+
+	.roi-item.savings {
+		border-color: rgba(16, 185, 129, 0.4);
+		background: rgba(16, 185, 129, 0.1);
+	}
+
+	.roi-label {
+		font-size: 14px;
+		color: #b0b8c3;
+		font-weight: 600;
+	}
+
+	.roi-value {
+		font-size: 15px;
+		color: #f3f4f6;
+		font-weight: 600;
+		font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
+	}
+
+	.roi-item.savings .roi-value {
+		color: #10b981;
+		font-size: 18px;
+	}
+
+	/* FAQ Section */
+	#faq {
+		width: 100%;
+	}
+
+	.faq-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 20px;
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
+	.faq-item {
+		background: rgba(30, 35, 45, 0.8);
+		border: 1px solid rgba(88, 101, 255, 0.2);
+		border-radius: 12px;
+		padding: 24px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+		transition: transform 0.2s, box-shadow 0.2s;
+	}
+
+	.faq-item:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 8px 12px rgba(88, 101, 255, 0.3);
+	}
+
+	.faq-item h3 {
+		font-size: 16px;
+		font-weight: 600;
+		color: #8b95ff;
+		margin: 0 0 12px 0;
+		font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
+	}
+
+	.faq-item p {
+		font-size: 14px;
+		color: #d1d5db;
+		line-height: 1.7;
+		margin: 0;
+	}
+
+	/* Code Inline */
 	code {
 		display: inline;
 		background: rgba(88, 101, 255, 0.2);
@@ -245,40 +730,39 @@ const t = getTranslations(currentLocale);
 		font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
 	}
 
+	/* Responsive Design */
 	@media screen and (max-width: 1024px) {
+		.workflow-grid {
+			grid-template-columns: 1fr;
+			gap: 12px;
+		}
+
+		.workflow-arrow {
+			transform: rotate(90deg);
+		}
+
+		.technical-grid,
+		.use-cases-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.tech-card.tech-stack {
+			grid-column: 1;
+		}
+
 		h1 {
 			font-size: 42px;
 		}
 
 		.tagline {
-			font-size: 20px;
-		}
-
-		.future-badge {
-			font-size: 16px;
-			padding: 10px 28px;
-			letter-spacing: 1.5px;
-		}
-
-		.hype-text {
 			font-size: 18px;
-			padding: 20px 28px;
-		}
-
-		#workflow h2 {
-			font-size: 30px;
-		}
-
-		.workflow-intro {
-			font-size: 16px;
-			padding: 20px 28px;
 		}
 	}
 
 	@media screen and (max-width: 640px) {
 		main {
 			padding: 48px 24px;
-			gap: 60px;
+			gap: 80px;
 		}
 
 		h1 {
@@ -286,8 +770,8 @@ const t = getTranslations(currentLocale);
 		}
 
 		.tagline {
-			font-size: 18px;
-			margin-bottom: 24px;
+			font-size: 16px;
+			margin-bottom: 20px;
 		}
 
 		.future-badge {
@@ -296,25 +780,38 @@ const t = getTranslations(currentLocale);
 			letter-spacing: 1px;
 		}
 
-		.hype-text {
-			font-size: 16px;
-			line-height: 1.7;
-			padding: 20px 24px;
+		.hype-text,
+		.metrics {
+			font-size: 15px;
+			padding: 16px 20px;
 		}
 
-		#workflow h2 {
-			font-size: 26px;
-			margin-bottom: 20px;
+		.code-example,
+		.architecture-diagram {
+			padding: 16px;
 		}
 
-		.workflow-intro {
-			font-size: 16px;
-			margin-bottom: 32px;
-			padding: 20px 24px;
+		.code-example code,
+		.architecture-diagram code {
+			font-size: 12px;
 		}
 
-		.workflow-step {
-			max-width: 400px;
+		#workflow h2,
+		#technical h2,
+		#use-cases h2,
+		#roi h2,
+		#faq h2 {
+			font-size: 28px;
+		}
+
+		.roi-example {
+			padding: 24px 20px;
+		}
+
+		.roi-item {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 4px;
 		}
 	}
 </style>
