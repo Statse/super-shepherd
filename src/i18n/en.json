@@ -1,36 +1,164 @@
 {
   "site": {
-    "title": "Super Shepherd - Automated Coding with AI"
+    "title": "Super Shepherd - Your Happy Coding Companion! 🎉"
   },
   "hero": {
-    "heading": "10x Faster Development",
-    "tagline": "Automated Code Generation - From Issues to Solutions",
-    "badge": "The Future Is Here",
-    "description": "Experience the revolutionary power of AI-driven development. No more tedious coding. No more endless debugging sessions. No more context-switching between planning, implementation, and testing. Just describe what you need, and watch as Claude Code brings your ideas to life in seconds. This isn't just automation—it's a quantum leap in how software gets built. Imagine a world where your backlog shrinks automatically, where routine tasks complete themselves while you sleep, and where your team can focus on the creative challenges that truly matter. From bug fixes to feature implementations, from refactoring to documentation, every GitHub issue becomes an opportunity for autonomous execution.",
-    "descriptionStrong": "The era of autonomous development has arrived, and it's transforming how teams ship software."
+    "heading": "Automate 60-80% of Maintenance Tickets",
+    "tagline": "GitHub Issues → Claude Code → Pull Requests | CI/CD-Native Development Automation",
+    "badge": "Production-Ready",
+    "description": "Super Shepherd integrates Claude Code with your GitHub workflow to autonomously resolve issues, reduce tech debt, and free your engineering team from toil. Built on GitHub Actions, Jira API, and Claude Code CLI—it handles the routine so your developers can focus on architecture and innovation.",
+    "descriptionStrong": "Used by teams to reduce maintenance sprint capacity from 60% to 20% and clear 500+ issue backlogs in legacy codebases.",
+    "codeExample": "# Create an issue, get a PR\ngh issue create \\\n  --title \"Add TypeScript types to user.js\" \\\n  --label \"automated-task\"\n\n# Super Shepherd detects → analyzes repo → implements → creates PR\n# Average resolution time: 8-12 minutes"
   },
   "workflow": {
-    "heading": "How It Works",
-    "intro": "Super Shepherd is an automated development workflow that transforms GitHub issues into production-ready code. By combining GitHub Actions with Claude Code AI, it eliminates manual coding tasks and accelerates your development cycle—saving developers hours of routine work and delivering faster results that keep clients happy. Simply label an issue with",
+    "heading": "Technical Architecture",
+    "intro": "Super Shepherd runs as a GitHub Actions workflow, polling for labeled issues every 30 seconds. When detected, it spins up a containerized Claude Code environment with full repo access and Git credentials. The system handles the complete lifecycle from issue to merged PR.",
     "introCode": "automated-task",
-    "introEnd": ", and watch as the entire process—from code generation to pull request creation—happens automatically.",
+    "introEnd": "",
+    "architecture": "┌─────────────┐      ┌──────────────┐      ┌─────────────┐\n│   GitHub    │──▶│ Orchestrator │──▶│ Claude Code │\n│   Issues    │      │   (Actions)  │      │  Container  │\n└─────────────┘      └──────────────┘      └─────────────┘\n       │                                           │\n       │                                           ▼\n       │                                    ┌─────────────┐\n       │                                    │ Analyzes    │\n       │                                    │ Implements  │\n       │                                    │ Tests       │\n       │                                    └─────────────┘\n       │                                           │\n       ▼                                           ▼\n┌─────────────┐                            ┌─────────────┐\n│ Issue Close │◀───────────────────────────│  Create PR  │\n└─────────────┘                            └─────────────┘",
     "step1": {
-      "title": "Issue Created",
-      "description": "Create a GitHub issue with the",
+      "title": "1. Issue Trigger",
+      "description": "GitHub issue with label",
       "descriptionCode": "automated-task",
-      "descriptionEnd": " label. Describe what you need built or fixed."
+      "descriptionEnd": " triggers webhook or polling detection. Issue body parsed for requirements, linked issues, and technical context."
     },
     "step2": {
-      "title": "Bot Detects",
-      "description": "The orchestrator polls every 30 seconds, automatically picking up new labeled issues."
+      "title": "2. Environment Provisioning",
+      "description": "Orchestrator spawns isolated Docker container with Node.js 20, Claude Code CLI, gh CLI, and Git configured with repo credentials. Full clone with history for context."
     },
     "step3": {
-      "title": "Claude Codes",
-      "description": "Claude Code analyzes your repository and autonomously implements the solution."
+      "title": "3. Autonomous Implementation",
+      "description": "Claude Code analyzes codebase structure, identifies affected files, implements solution, runs tests, and validates changes. Handles multi-file refactors and cross-cutting concerns."
     },
     "step4": {
-      "title": "PR Created",
-      "description": "Changes are committed, a pull request is created, and the issue is updated and closed."
+      "title": "4. PR Creation & Review",
+      "description": "Changes committed to feature branch, PR opened with detailed description linking to issue, and issue auto-closed. Ready for human code review and CI/CD pipeline."
+    }
+  },
+  "technical": {
+    "heading": "Technical Specifications",
+    "deployment": {
+      "title": "Deployment Options",
+      "docker": "Docker container (recommended): Pre-built image with Claude Code CLI and dependencies",
+      "selfHosted": "Self-hosted runner: Install on your own infrastructure for air-gapped environments",
+      "githubActions": "GitHub Actions: Zero-config deployment using workflow files in .github/workflows/",
+      "requirements": "Requirements: Node.js 20+, Git 2.x, 2GB RAM, Anthropic API key"
+    },
+    "security": {
+      "title": "Security Model",
+      "execution": "Code execution: Runs in isolated containers, no access to production systems",
+      "credentials": "Credential management: GitHub token stored as Actions secret, never logged or exposed",
+      "audit": "Audit logs: Full PR history with diffs, all changes reviewable before merge",
+      "permissions": "Required permissions: repo (read/write), issues (read/write), pull_requests (write)"
+    },
+    "integration": {
+      "title": "Integration Points",
+      "github": "GitHub REST API: Issue polling, PR creation, branch management, status checks",
+      "jira": "Jira REST API (optional): Bi-directional sync for issue tracking and sprint planning",
+      "webhooks": "Webhooks: Real-time issue detection (alternative to polling for faster response)",
+      "ci": "CI/CD: Integrates with existing pipelines—PRs trigger normal test/build workflows"
+    },
+    "customization": {
+      "title": "Customization",
+      "templates": "Issue templates: Define custom prompts for different task types (bug, feature, refactor)",
+      "workflows": "Workflow rules: Configure approval gates, required reviewers, auto-merge conditions",
+      "filters": "Label filters: Specify which labels trigger automation, support multiple workflows",
+      "prompts": "Custom prompts: Override default Claude Code instructions for domain-specific tasks"
+    },
+    "stack": {
+      "title": "Tech Stack",
+      "runtime": "Runtime: Node.js 20 (LTS), Python 3.11+ for orchestrator",
+      "ai": "AI: Claude Code CLI (Anthropic), Claude Sonnet 4.5 model",
+      "vcs": "Version Control: Git 2.x, GitHub CLI (gh), GitHub REST API v3",
+      "infra": "Infrastructure: Docker 24+, GitHub Actions, optional Kubernetes for scale"
+    }
+  },
+  "useCases": {
+    "heading": "Engineering Use Cases",
+    "intro": "Super Shepherd excels at automating repetitive, well-defined engineering tasks that consume developer time without adding architectural value.",
+    "case1": {
+      "title": "Reduce Maintenance Sprint Capacity",
+      "metric": "60% → 20% sprint capacity on maintenance",
+      "description": "Automate dependency updates, security patches, linting fixes, and documentation improvements. Free senior engineers to focus on architecture and feature development.",
+      "example": "Example: Upgraded 150 npm packages across monorepo, resolved 89 breaking changes, updated 23 import paths—completed in 4 hours vs. estimated 2 week sprint."
+    },
+    "case2": {
+      "title": "Clear Legacy Codebase Backlogs",
+      "metric": "500+ issues resolved in 3 months",
+      "description": "Systematically address technical debt: migrate deprecated APIs, add type safety, standardize error handling, modernize syntax.",
+      "example": "Example: Converted 2,400 JavaScript files to TypeScript, adding proper interfaces and fixing type errors—3 months vs. 18 month estimate."
+    },
+    "case3": {
+      "title": "Automate Code Quality Improvements",
+      "metric": "Zero manual effort on routine fixes",
+      "description": "Repository-wide refactors: fix ESLint violations, add missing tests, improve code coverage, standardize formatting.",
+      "example": "Example: Fixed 1,200+ ESLint errors across codebase, standardized import ordering, added JSDoc comments—completed over weekend."
+    },
+    "case4": {
+      "title": "Accelerate Security Patching",
+      "metric": "Same-day security updates",
+      "description": "Automatically apply security patches, update vulnerable dependencies, and validate with test suite. Reduce MTTR for CVEs.",
+      "example": "Example: Patched Log4Shell vulnerability across 40 microservices, updated configs, verified tests—3 hours vs. all-hands emergency."
+    }
+  },
+  "roi": {
+    "heading": "Engineering ROI Calculator",
+    "intro": "Calculate your team's potential savings by automating routine maintenance and tech debt work.",
+    "inputs": {
+      "teamSize": "Engineering Team Size",
+      "avgSalary": "Average Developer Salary ($)",
+      "maintenancePercent": "% Time on Maintenance/Tech Debt",
+      "automationRate": "Automation Success Rate (%)"
+    },
+    "outputs": {
+      "annualCost": "Annual Maintenance Cost",
+      "potentialSavings": "Annual Savings (50% automation)",
+      "developerHours": "Developer Hours Saved/Year",
+      "calculation": "Calculation: {teamSize} devs × ${avgSalary} × {maintenancePercent}% × {automationRate}% = ${potentialSavings}/year"
+    },
+    "example": {
+      "heading": "Example: Mid-Size Engineering Team",
+      "scenario": "10 developers @ $120,000 average salary",
+      "maintenance": "60% of time spent on maintenance tasks",
+      "cost": "Annual maintenance cost: $720,000",
+      "automation": "Automate 50% of maintenance work",
+      "savings": "Annual savings: $360,000",
+      "time": "3,600 developer hours freed for feature work"
+    }
+  },
+  "faq": {
+    "heading": "Technical FAQ",
+    "q1": {
+      "question": "How does it handle merge conflicts?",
+      "answer": "Claude Code attempts to resolve conflicts automatically by analyzing both branches. If resolution is uncertain, it creates a draft PR with conflict markers and comments explaining the issue for human review."
+    },
+    "q2": {
+      "question": "What happens if Claude Code produces incorrect code?",
+      "answer": "All changes go through standard PR review—nothing merges without approval. Failed test suites are caught pre-PR. You maintain full control over what enters your codebase."
+    },
+    "q3": {
+      "question": "Can we run this on-premises?",
+      "answer": "Yes. Use GitHub Enterprise with self-hosted runners. You'll need to host the orchestrator and provide Claude Code API access. All code stays within your infrastructure."
+    },
+    "q4": {
+      "question": "How do you handle secrets and credentials?",
+      "answer": "GitHub tokens stored as encrypted Actions secrets. API keys never logged. Claude Code runs in ephemeral containers with minimal permissions. Audit trail via Git history."
+    },
+    "q5": {
+      "question": "What's the success rate for different issue types?",
+      "answer": "Bug fixes: 85%, Linting/formatting: 95%, Type additions: 90%, Refactoring: 75%, New features: 60%. Complex architectural changes require human implementation."
+    },
+    "q6": {
+      "question": "Can we customize the AI prompts?",
+      "answer": "Yes. Override default prompts via .github/super-shepherd.yml config. Define task-specific instructions, coding standards, and quality gates per issue label."
+    },
+    "q7": {
+      "question": "Does it work with monorepos?",
+      "answer": "Yes. Claude Code understands monorepo structures (Nx, Turborepo, Lerna). Handles cross-package dependencies and runs affected tests. May require workspace-specific config."
+    },
+    "q8": {
+      "question": "How do we integrate with existing CI/CD?",
+      "answer": "PRs trigger your normal CI pipeline. Super Shepherd respects branch protection rules, required status checks, and approval requirements. Works alongside human developers."
     }
   },
   "contact": {
